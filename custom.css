@@ -5,3 +5,12 @@ body {
     font-family: 'Oswald', sans-serif;
 
 }
+
+
+#users_container {
+    overflow-y: auto;
+}
+
+#users_container::-webkit-scrollbar {
+    width: 0px;
+}
