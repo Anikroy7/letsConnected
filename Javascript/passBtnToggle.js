@@ -2,7 +2,7 @@
 
 //---------- Password toggle button control
 const passField = document.getElementById('passwordField');
-console.log(passField);
+
 passField.onkeyup = () => {
     if (!passField.value.length) {
         toggleBtn.classList.add('fa-disabled');

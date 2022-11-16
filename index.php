@@ -44,50 +44,44 @@
 
                 <!-- Input Section Start -->
                 <section>
-                    <form action="#">
+                    <form id="registrationForm">
                         <div class="flex gap-4">
-                            <div class="form-control w-full max-w-xs">
+                            <div class="w-full max-w-xs">
                                 <label class="label">
                                     <span class="label-text">First Name</span>
                                 </label>
-                                <input type="text" placeholder="First Name"
-                                    class="input input-bordered w-full max-w-xs py-0" />
+                                <input name='fname' type="text" placeholder="First Name" class="input input-bordered w-full max-w-xs py-0" required />
                             </div>
-                            <div class="form-control w-full max-w-xs">
+                            <div class=w-full max-w-xs">
                                 <label class="label">
                                     <span class="label-text">Last Name</span>
                                 </label>
-                                <input type="text" placeholder="Last Name"
-                                    class="input input-bordered w-full max-w-xs p-1" />
+                                <input name="lname" type="text" placeholder="Last Name" class="input input-bordered w-full max-w-xs p-1" required />
                             </div>
                         </div>
-                        <div class="form-control w-full max-w-xs">
+                        <div class="w-full max-w-xs">
                             <label class="label">
                                 <span class="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter your email"
-                                class="input input-bordered w-full max-w-xs p-1" />
+                            <input type="email" name="email" placeholder="Enter your email" class="input input-bordered w-full max-w-xs p-1" required />
                         </div>
-                        <div class="form-control w-full max-w-xs">
+                        <div class="w-full max-w-xs">
                             <label class="label">
                                 <span class="label-text">Password</span>
                             </label>
-                            <input id="passwordField" type="password" placeholder="Enter your password"
-                                class="input input-bordered w-full max-w-xs p-1" />
+                            <input id="passwordField" name="password" type="password" placeholder="Enter your password" class="input input-bordered w-full max-w-xs p-1" required />
                             <i id="passwordEye" class="fa fa-eye fa-disabled relative left-[290px] top-[-30px]"></i>
                         </div>
-                        <div class="form-control w-full max-w-xs py-4">
+                        <div class="w-full max-w-xs py-4">
                             <label for="avatar">Select Image</label>
-                            <input type="file" id="iamge" name="image" accept="image/png, image/jpeg">
+                            <input name="image" type="file" id="iamge" name="image" accept="image/png, image/jpeg" required>
                         </div>
-                        <div class="form-control w-full max-w-xs mt-3">
-
-                            <input type="submit" id="submit" name="submit" value="Let's chat together"
-                                class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-2 text-center text-sm  uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+                        <div class="w-full max-w-xs mt-3">
+                            <input id="registerBtn" type="submit" id="submit" name="submit" value="Let's chat together" class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-2 text-center text-sm  uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900" required>
                         </div>
                     </form>
 
-                    <div class="form-control w-full max-w-xs mt-3">
+                    <div class="w-full max-w-xs mt-3">
 
                         <p>
                             <small> Already signed up?</small>
@@ -105,7 +99,7 @@
 
     <!-- Custom js link -->
     <script src="javascript/passBtnToggle.js"></script>
-
+    <script src="javascript/signup.js"></script>
 </body>
 
 </html>
