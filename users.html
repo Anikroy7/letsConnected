@@ -48,18 +48,21 @@
                         </div>
                         <div>
                             <button
-                                class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm px-5 text-white transition duration-200 ease-in-out hover:bg-gray-900">Logout</button>
+                                class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm px-5 text-white transition duration-200 ease-in-out hover:bg-gray-900">
+                                Logout
+                            </button>
                         </div>
                     </div>
                     <div class="h-px bg-slate-200 w-full my-3"></div>
 
                     <div class="row mb-4 text-center">
-                        <input type="text" class="border col-8 w-64 pl-2" name="search" id=""
+                        <input id="searchField" type="text" class="border col-8 w-64 pl-2" name="search" id=""
                             placeholder="Enter your name to search..">
-                        <button
+                        <button id="searchBtn"
                             class="bg-gray-800 text-white relative right-[10px] px-2 hover:bg-red-900 transition duration-200 ease-in-out col-4">
                             <i class="fas fa-search"></i>
                         </button>
+                        <p id="emptySearchError" class="text-red-600 hidden">Please select an user first!</p>
                     </div>
                 </div>
 
@@ -193,6 +196,9 @@
 
         </div>
     </section>
+
+    <!-- Custom js -->
+    <script src="javascript/users.js"></script>
 </body>
 
 </html>
