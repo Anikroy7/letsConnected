@@ -5,7 +5,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'chat');
 
 // Check connection
 if ($conn) {
-    echo "Connected successfully";
+    // echo "Connected successfully";
 } else {
     echo "Failed to connect";
 }

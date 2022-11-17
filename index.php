@@ -38,46 +38,46 @@
             <div class="card-body">
                 <h2 class="card-title text-gray-800 text-2xl py-2">Let's Connected</h2>
                 <div class="h-px bg-slate-200 w-full mb-3"></div>
-                <div class="h-10 rounded bg-red-200 text-center w-full flex justify-center items-center hidden">
+                <div id="error_div" class="h-10 rounded bg-red-200 text-center w-full flex justify-center items-center hidden">
                     <small class="text-red-700 ">This is an error message</small>
                 </div>
 
                 <!-- Input Section Start -->
                 <section>
-                    <form id="registrationForm">
+                    <form action="#" id="registrationForm" method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="flex gap-4">
                             <div class="w-full max-w-xs">
                                 <label class="label">
                                     <span class="label-text">First Name</span>
                                 </label>
-                                <input name='fname' type="text" placeholder="First Name" class="input input-bordered w-full max-w-xs py-0" required />
+                                <input name='fname' type="text" placeholder="First Name" class="input input-bordered w-full max-w-xs py-0" />
                             </div>
-                            <div class=w-full max-w-xs">
+                            <div class="w-full max-w-xs">
                                 <label class="label">
                                     <span class="label-text">Last Name</span>
                                 </label>
-                                <input name="lname" type="text" placeholder="Last Name" class="input input-bordered w-full max-w-xs p-1" required />
+                                <input name="lname" type="text" placeholder="Last Name" class="input input-bordered w-full max-w-xs p-1" />
                             </div>
                         </div>
                         <div class="w-full max-w-xs">
                             <label class="label">
                                 <span class="label-text">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="Enter your email" class="input input-bordered w-full max-w-xs p-1" required />
+                            <input type="email" name="email" placeholder="Enter your email" class="input input-bordered w-full max-w-xs p-1" />
                         </div>
                         <div class="w-full max-w-xs">
                             <label class="label">
                                 <span class="label-text">Password</span>
                             </label>
-                            <input id="passwordField" name="password" type="password" placeholder="Enter your password" class="input input-bordered w-full max-w-xs p-1" required />
+                            <input id="passwordField" name="password" type="password" placeholder="Enter your password" class="input input-bordered w-full max-w-xs p-1" />
                             <i id="passwordEye" class="fa fa-eye fa-disabled relative left-[290px] top-[-30px]"></i>
                         </div>
                         <div class="w-full max-w-xs py-4">
                             <label for="avatar">Select Image</label>
-                            <input name="image" type="file" id="iamge" name="image" accept="image/png, image/jpeg" required>
+                            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
                         </div>
                         <div class="w-full max-w-xs mt-3">
-                            <input id="registerBtn" type="submit" id="submit" name="submit" value="Let's chat together" class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-2 text-center text-sm  uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900" required>
+                            <input id="registerBtn" type="submit" id="submit" name="submit" value="Let's chat together" class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-2 text-center text-sm  uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
                         </div>
                     </form>
 
