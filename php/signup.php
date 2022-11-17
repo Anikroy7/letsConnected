@@ -8,12 +8,10 @@ $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-// echo $fname;
+
 
 if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
-    /*     echo $fname, $lname, $email, $password; */
-    /*   $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, image, status ) VALUES ('{$unique_id}', '{$fname}', '{$lname}', '{$email}', '{$password}', '{$image}', '{$status}')");
-    echo ';' */
+
     // Check the email valid or invalid
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Email duplication check
@@ -44,7 +42,6 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
 
 
                         // Create a unique id for insert to database
-                        // $ran_id = rand(time(), 100000000);
                         $unique_id = rand(time(), 100000000);
 
                         // Insert the all valid data to database 
@@ -53,7 +50,6 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
 
 
                         if ($sql2) {
-                            // echo "hello form sql-2";
                             $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
                             if (mysqli_num_rows($sql3) > 0) {
                                 $row = mysqli_fetch_assoc($sql3);

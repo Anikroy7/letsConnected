@@ -1,15 +1,18 @@
-const registerBtn = document.getElementById('registerBtn');
-const form = document.getElementById('registrationForm');
+const loginBtn = document.getElementById('loginBtn');
+const form = document.getElementById('loginForm');
 const errorDiv = document.getElementById('error_div');
-console.log(form, 'this is form');
+
+console.log('hello login');
+
 form.onsubmit = (event) => {
     event.preventDefault();
 }
 
-registerBtn.onclick = () => {
+loginBtn.onclick = () => {
     const xhr = new XMLHttpRequest();
-
-    xhr.open("POST", "php/signup.php", true);
+    // console.log(xhr, 'heloo submit');
+    xhr.open("POST", "php/user_login.php", true);
+    console.log(xhr);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -25,8 +28,7 @@ registerBtn.onclick = () => {
         }
 
     }
-    const formData = new FormData(form);
-    console.log(formData, 'form form data'); // Creating form data object
+    const formData = new FormData(form);// Creating form data object
     xhr.send(formData);    // Send data to php file 
 }
 
