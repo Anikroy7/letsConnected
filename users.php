@@ -54,7 +54,7 @@ if (mysqli_num_rows($sql) > 0) {
 
                     <div class="row mb-4 text-center">
                         <input id="searchField" type="text" class="col-8 w-40 pl-2" name="search" id="" placeholder="Select an user for chat">
-                        <button id="searchBtn" class="relative right-[10px] px-2 col-4">
+                        <button id="searchBtn" class="relative right-[10px] left-[2px] px-2 col-4">
                             <i id="searchIcon" class="fas fa-search "></i>
                             <img id="closeIcon" src="myImages/close.png" class="h-3 relative top-[-17px]" alt="">
                         </button>
