@@ -53,7 +53,7 @@ if (!isset($_SESSION['unique_id'])) {
 
                 <!-- Chat message container -->
 
-                <section id="chat_msg_container" class="mt-5 bg-zinc-200">
+                <section id="chat_msg_container" class="mt-5 bg-zinc-200 h-screen">
 
 
 

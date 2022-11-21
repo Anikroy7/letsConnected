@@ -34,6 +34,12 @@ setInterval(() => {
             if (xhr.status === 200) {
                 const data = xhr.response;
                 chat_msg_container.innerHTML = data;
+                if (!chat_msg_container.innerHTML) {
+                    chat_msg_container.innerHTML = `
+                    
+                    <p class="flex justify-center items-center pt-[100px]">No message available here...</p>
+                    `
+                }
             }
         }
     }
