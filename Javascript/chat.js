@@ -3,12 +3,14 @@ const sendBtn = document.getElementById('sendBtn');
 const form = document.getElementById('chatForm');
 const chat_msg_container = document.getElementById('chat_msg_container');
 
+
+
 form.onsubmit = (event) => {
     event.preventDefault();
 }
 
 sendBtn.onclick = () => {
-    console.log('send btn clicked');
+
     const xhr = new XMLHttpRequest();
     console.log('send btn clicked');
     xhr.open("POST", "php/insert_chat.php", true);
@@ -36,7 +38,6 @@ setInterval(() => {
                 chat_msg_container.innerHTML = data;
                 if (!chat_msg_container.innerHTML) {
                     chat_msg_container.innerHTML = `
-                    
                     <p class="flex justify-center items-center pt-[100px]">No message available here...</p>
                     `
                 }

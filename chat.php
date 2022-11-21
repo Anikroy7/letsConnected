@@ -6,8 +6,8 @@ if (!isset($_SESSION['unique_id'])) {
 
 ?>
 
-<?php include_once 'header.php' ?>
-
+<?php include_once 'header.php'; ?>
+<?php include_once 'php/config.php'; ?>
 
 
 <body>
@@ -18,15 +18,16 @@ if (!isset($_SESSION['unique_id'])) {
             <section id="chat_container" class=" h-96">
 
                 <!-- Main user -->
-
                 <?php
-                include_once 'php/config.php';
                 $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
-                $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id={$user_id}");
+                $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
                 if (mysqli_num_rows($sql) > 0) {
                     $row = mysqli_fetch_assoc($sql);
+                } else {
+                    header("location: users.php");
                 }
                 ?>
+
 
 
                 <section class="sticky top-0 z-20 bg-white px-5 py-5">
@@ -44,7 +45,7 @@ if (!isset($_SESSION['unique_id'])) {
                                     <?php echo $row['status']; ?>
                                 </small>
                             </div>
-                            <div class="bg-neutral-focus bg-green-500 rounded-full w-2 h-2 relative left-[4px] mt-[30px]">
+                            <div class="bg-neutral-focus bg-green-500 rounded-full w-2 h-2 relative left-[14px] mt-[30px]">
                             </div>
                         </div>
                     </div>
@@ -54,39 +55,6 @@ if (!isset($_SESSION['unique_id'])) {
                 <!-- Chat message container -->
 
                 <section id="chat_msg_container" class="mt-5 bg-zinc-200 h-screen">
-
-
-
-
-
-                    <!--My chat section 1-->
-                    <!--      <div class="flex justify-end p-5">
-                        <p class="text-sm bg-gray-800 text-white w-64 p-2 rounded-l-xl text-yellow-50 rounded-tr-xl">
-                            Lorem
-                            ipsum dolor
-                            sit amet
-                            consectetur,
-                            adipisicing
-                            elit.</p>
-                    </div> -->
-
-
-                    <!-- Other person chat section- 1 -->
-
-                    <!--         <div class="px-5">
-                        <div class="avatar">
-                            <div class="w-8 h-8 rounded-full mr-2 mt-9">
-                                <img src="https://placeimg.com/192/192/people" />
-                            </div>
-                            <p class="text-sm bg-white text-white w-64 p-2 rounded-r-xl text-gray-800 rounded-tl-xl">
-                                Lorem
-                                ipsum dolor
-                                sit amet
-                                consectetur,
-                                adipisicing
-                                elit.</p>
-                        </div>
-                    </div> -->
                 </section>
 
 

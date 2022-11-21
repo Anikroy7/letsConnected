@@ -4,6 +4,7 @@ const allUsersDiv = document.getElementById('allUsersDiv');
 const searchIcon = document.getElementById('searchIcon');
 const closeIcon = document.getElementById('closeIcon');
 
+
 if (!searchField.value) {
     closeIcon.classList.add('invisible');
     // searchField.placeholder = "Select an user to start chat";

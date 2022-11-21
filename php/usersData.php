@@ -7,6 +7,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
                 OR incoming_msg_id = {$outgoing_id}) ORDER BY msg_id DESC LIMIT 1";
     $query2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_assoc($query2);
+
     (mysqli_num_rows($query2) > 0) ? $result = $row2['message'] : $result = "No message available";
     (strlen($result) > 28) ? $msg =  substr($result, 0, 28) . '...' : $msg = $result;
     if (isset($row2['outgoing_msg_id'])) {
@@ -27,11 +28,11 @@ while ($row = mysqli_fetch_assoc($sql)) {
                             </div>
                         </div>
                             <div class="ml-5">
-                                <span class="block">' . $row["fname"] . $row["lname"] . '</span>
+                                <span class="block">' . $row["fname"] . ' ' . $row["lname"] . '</span>
                                 <small class="text-zinc-400">' . $you . $msg . '</small>
                             </div>
                         </div>
-                        <div class="bg-neutral-focus bg-green-500 rounded-full w-2 h-2 mr-7">
+                        <div id="status_div" class="bg-neutral-focus bg-green-500 rounded-full w-3 h-3 mr-7 ' . $offline . ' ">
                         </div>
                     </section>
                 </a>';
